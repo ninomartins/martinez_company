@@ -1,0 +1,16 @@
+.controle {
+    position: absolute;
+    right: 10px;
+}
+.cliente {
+    font-size: var(--font-step--2);
+    color: var(--cor2);
+}
+
+.cli-export{
+    color: tomato;
+}
+.l-container{
+    display: flex;
+    justify-content: center;
+}

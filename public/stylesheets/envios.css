@@ -1,0 +1,87 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    /* cores */
+    --cor1: rgb(89, 89, 89);
+    --cor2: rgba(89, 89, 89, 0.66);
+    --cor3: rgb(255, 255, 255);
+    --cor4: rgb(0, 0, 0);
+    /* fontes */
+    --font-step--2: clamp(0.78rem, calc(0.78rem + 0.13vw), 0.84rem);
+    --font-step--1: clamp(0.94rem, calc(0.79rem + 0.38vw), 1.13rem);
+    --font-step-0: clamp(1.13rem, calc(0.83rem + 0.75vw), 1.5rem);
+    --font-step-1: clamp(1.13rem, calc(0.83rem + 1.3vw), 2rem);
+    --font-step-2: clamp(1.62rem, calc(0.78rem + 2.09vw), 2.67rem);
+    --font-step-3: clamp(1.94rem, calc(0.66rem + 3.22vw), 3.55rem);
+    --font-step-4: clamp(2.33rem, calc(0.41rem + 4.81vw), 4.74rem);
+    --font-step-5: clamp(2.8rem, calc(-0.01rem + 7.03vw), 6.31rem);
+    --font-step-6: clamp(1.7rem, calc(-0.66rem + 6.22vw), 6.55rem);
+  }
+
+
+
+.saudacao {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin: 0 auto;
+    /* background-image: linear-gradient(45deg,tomato,#f00000);
+    background-size: 300% 300%;
+    animation: colorback 5s infinite linear; */
+    border-radius: 7px;
+    box-shadow: 1px 1px 20px white;
+    padding: 20px;
+}
+body{
+    display: flex;
+   align-items: center;
+   height: 100vh;
+}
+@keyframes colorback {
+    0%{ background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+.cliente {
+    font-size: var(--font-step-1);
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+.texto1{
+    font-size:var(--font-step-0) ;
+}
+.saudacao div {
+    margin-top: 20%;
+    padding: 10px 70px;
+    font-size: var(--font-step-0);
+    box-shadow: 1px 1px 10px white;
+    appearance: none;
+    outline-color: transparent;
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px black;
+}
+.saudacao div:hover {
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(255, 99, 71);
+}
+.saudacao div:hover  p{
+    color: tomato;
+}
+.saudacao a {
+    color: var(--cor4);
+}
+.saudacao img{
+    margin-top: 10%;
+    width: 40%;
+    border-radius: 10px;
+}

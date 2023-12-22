@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/contatos.css">
+    <title>Contatos</title>
+</head>
+
+<body>
+    <%- include('header') %>
+    <img src="/images/CONTATOS.png" alt="">
+        <div class="l-container">
+         
+            <div class="formulario">
+                <h1 class="titulo-contato">
+                    CONTATOS
+                </h1>
+                
+                <form action="/envio/" method="post" data-form>
+                    <input type="text" name="nome" placeholder="Nome" required>
+                    <input type="tel" name="tel" placeholder="Telefone" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="text" name="cidade" placeholder="Cidade" required>
+                    <button type="submit" data-button >Enviar</button>
+                </form>
+            </div>
+        </div>
+        <script src="/javascripts/contatos.js"></script>
+</body>
+
+</html>

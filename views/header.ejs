@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <title>Header</title>
+</head>
+<body>
+    
+<header class="header">
+    <div class="logo">
+        <h1 class="logotipo">
+            Martinez Company
+        </h1>
+    </div>
+    <div class="menu">
+        <form action="/buscar/" method="post">
+            <input type="search" name="buscar" aria-activedescendant="oi">
+            <button type="submit">buscar</button>
+        </form>
+        <ul class="nav">
+            <li>
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="/pagina/contatos">
+                   Contatos
+                </a>
+            </li>
+            <li>
+                <a href="/pagina/prod">
+                    Produtos
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-cel  " onclick="nemuCelularX(this)">
+        <div data-direita ></div>
+        <div data-centro ></div>
+        <div data-esquerda ></div>
+    </div>
+    <div class="link-cel">
+        <ul class="links-cel">
+            <li><a href="/">Home</a></li>
+            <li><a href="/pagina/contatos">Contatos</a></li>
+            <li><a href="/pagina/prod">Produtos</a></li>
+        </ul>
+    </div>
+</header>
+<script src="/javascripts/menu.js"></script>
+</body>
+</html>
+
+

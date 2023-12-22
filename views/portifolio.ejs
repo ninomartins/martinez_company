@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/portifolio.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="controle">
+        <h3 class="cliente"><i class="fa-solid fa-user"></i> &nbsp; Oi &nbsp; <span class="cli-export"><%= cliente %> &nbsp; </span> seja bem vindo!</h3>
+     </div>
+    <%- include('header') %>
+    <div class="l-container">
+        <ul>
+            <% for(var i=0; i<pessoas.length; i++) {%>
+                <li>
+                    Nome: <%= pessoas[i].nome %>
+                </li>
+                <hr>
+                <li>
+                    email: <%= pessoas[i].email %>
+                   
+                </li>
+                <hr>
+                <li>
+                    Telefone: <%= pessoas[i].telefone %>
+                   
+                </li>
+                <hr>
+                <li>
+                    Cidade: <%= pessoas[i].cidade %>
+                   
+                </li>
+                <hr>
+                <li>
+                    Estado: <%= pessoas[i].estado %>
+                   
+                </li>
+                <br>
+                <br>
+                <% } %>
+        </ul>
+    </div>
+    
+</body>
+</html>
