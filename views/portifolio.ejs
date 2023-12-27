@@ -8,40 +8,82 @@
 </head>
 <body>
     <div class="controle">
-        <h3 class="cliente"><i class="fa-solid fa-user"></i> &nbsp; Oi &nbsp; <span class="cli-export"><%= cliente %> &nbsp; </span> seja bem vindo!</h3>
+       <h3 class="cliente"><i class="fa-solid fa-user"></i> &nbsp; Oi &nbsp; <span class="cli-export">  <%= cliente %> &nbsp; </span> seja bem vindo(a)!</h3>
+     
      </div>
     <%- include('header') %>
     <div class="l-container">
-        <ul>
-            <% for(var i=0; i<pessoas.length; i++) {%>
-                <li>
-                    Nome: <%= pessoas[i].nome %>
-                </li>
-                <hr>
-                <li>
-                    email: <%= pessoas[i].email %>
-                   
-                </li>
-                <hr>
-                <li>
-                    Telefone: <%= pessoas[i].telefone %>
-                   
-                </li>
-                <hr>
-                <li>
-                    Cidade: <%= pessoas[i].cidade %>
-                   
-                </li>
-                <hr>
-                <li>
-                    Estado: <%= pessoas[i].estado %>
-                   
-                </li>
-                <br>
-                <br>
-                <% } %>
-        </ul>
+        <div class="back" style="position: absolute; right: 10px; top: 20px; ">
+            <h5><a href="/logando/deslogado" style="color: rgba(130, 130, 130, 0.513);">deslogar</a></h5>
+        </div>
+        <div class="bac">
+            <h1>NOSSOS SERVIÇOS</h1>
+            <h3>Construímos sites responsivos e com design impressionante</h3>
+        </div>
+        <article class="conteudo">
+           
+            <div class="conteudo-1">
+                <img src="/images/carde4.png" alt="">
+                <div class="textos-conteudo">
+                    <h1>O web design é a disciplina que abrange todas as atividades relacionadas à criação de elementos visuais para a internet.</h1>
+                </div>
+
+            </div>
+            <div class="conteudo-2">
+                <img src="/images/carde2.jpg" alt="">
+                <div class="textos-conteudo">
+                    <h1>O web design é a disciplina que abrange todas as atividades relacionadas à criação de elementos visuais para a internet.</h1>
+                </div>
+            </div>
+            <div class="conteudo-1">
+                <img src="/images/carde3.jpg" alt="">
+                <div class="textos-conteudo">
+                    <h1>O web design é a disciplina que abrange todas as atividades relacionadas à criação de elementos visuais para a internet.</h1>
+                </div>
+            </div>
+           
+        </article>
+        <article class="conteudo-3">
+            <div>
+                <h1>Criamos sites</h1>
+                <h2>IMPRESSIONANTES</h2>
+                    <p>Somos uma agência de criação de sites lindos, modernos, rápidos e profissionais. O seu site completamente personalizado e otimizado para receber contatos e aparecer no Google. Confira e se encante com nosso portifólio.</p>
+            </div>
+            <img src="/images/carde1.webp" alt="">
+        </article>
+        <article class="conteudo-4">
+            <h1>Portfólio</h1>
+<p>Conheça alguns de nossos sites. O seu site ficará na mesma excelente qualidade dos sites abaixo.</p>
+<article class="conteudo-5">
+    <div class="carde">
+        <img src="/images/prop2.jpeg" alt="">
+        <div class="carde-texto">
+    <p>Conheça nosso trabalho</p>
+    <p>Powerup geradores</p>
+    <a href="https://www.powerupgeradores.com.br/index.html" target="_blank"><button>conheça o site </button></a>
+        </div>
+    </div>
+    <div class="carde">
+        <img src="/images/prop3.jpeg" alt="">
+        <div class="carde-texto">
+    <p>Conheça nosso trabalho</p>
+    <p>Isc Móveis</p>
+    <a href="https://www.iscmoveis.com.br/index.html" target="_blank"><button>conheça o site </button></a>
+        </div>
+    </div>
+    <div class="carde">
+        <img src="/images/prop4.jpeg" alt="">
+        <div class="carde-texto">
+    <p>Conheça nosso trabalho</p>
+    <p>Floripa Marmoraria</p>
+    <a href="https://www.floripamarmoraria.com.br/" target="_blank"><button>conheça o site </button></a>
+        </div>
+    </div>
+</article>
+        </article>
+       
     </div>
     
+    <%- include('footer') %>
 </body>
 </html>

@@ -9,10 +9,17 @@
 </head>
 
 <body>
+
+    <div class="controle">
+        <h3 class="cliente"><i class="fa-solid fa-user"></i> &nbsp; Oi &nbsp; <span class="cli-export">  <%= cliente %> &nbsp; </span> seja bem vindo(a)!</h3>
+      </div>
+      
     <%- include('header') %>
     <img src="/images/CONTATOS.png" alt="">
         <div class="l-container">
-         
+            <div class="back" style="position: absolute; right: 10px; top: 20px; ">
+                <h5><a href="/logando/deslogado" style="color: rgba(130, 130, 130, 0.513);">deslogar</a></h5>
+            </div>
             <div class="formulario">
                 <h1 class="titulo-contato">
                     CONTATOS
@@ -27,6 +34,7 @@
                 </form>
             </div>
         </div>
+        <%- include('footer') %>
         <script src="/javascripts/contatos.js"></script>
 </body>
 

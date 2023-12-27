@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/criarLogin.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="l-container">
+        <h1>Criar Login e senha</h1>
+        <div class="formulario">
+            <form action="/logando/logar" method="post">
+                <input type="text" placeholder="Crie seu Login" required name="login">
+                <input type="password" placeholder="Crie sua Senha" required name="pass">
+                <button type="submit">Salvar</button>
+            </form>
+            <div class="botoes">
+                <div class="cancelar">
+                    
+                    <a href="/pagina/logar">Fazer login </a>
+                </div>
+                <div class="cancelar">
+                    <a href="/pagina/prod">cancelar</a>
+                </div>
+            </div>
+        </div>
+       
+        
+    </div>
+    <%- include('footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined"){ %>
+<script>
+    Swal.fire({
+      title:'<%= alertTitle %> ',
+      text:'<%= alertMenssage %>',
+      icon:'<%= alertIcon %>',
+      showConfirmButton:'<%= showConfirmButton %>',
+      timer:'<%= timer %>',
+    }).then(()=>{
+        window.location='/<%= ruta %>'
+    })
+</script>
+   <% } %>
+</body>
+</html>

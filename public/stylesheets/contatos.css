@@ -1,3 +1,36 @@
+.controle {
+    position: absolute;
+    right: 10px;
+}
+.cliente {
+    font-size: var(--font-step--2);
+    color: var(--cor2);
+}
+
+.cli-export{
+    color: tomato;
+}
+
+.bac  h1{
+    text-align: center;
+    font-size: var(--font-step-2);
+    color: tomato;
+    margin-top: 30px;
+}
+.bac h3 {
+    font-size: var(--font-step-2);
+    text-align: center;
+    color: var(--cor1);
+    /* text-shadow: 1px 1px 2px tomato; */
+    font-weight: 300;
+}
+
+
+
+
+
+
+
 .titulo-contato {
     text-align: center;
     margin-top: 5%;

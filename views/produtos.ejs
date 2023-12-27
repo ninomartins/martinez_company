@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/produtos.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="controle">
-       <h3 class="cliente"><i class="fa-solid fa-user"></i> &nbsp; Oi &nbsp; <span class="cli-export"><%= cliente %> &nbsp; </span> seja bem vindo!</h3>
+        <h3 class="cliente"><i class="fa-solid fa-user"></i> &nbsp; Oi &nbsp; <span class="cli-export">
+                <%= cliente %> &nbsp;
+            </span> seja bem vindo!</h3>
     </div>
     <%- include('header') %>
-   <h1 class="titulo">Cadastre-se para ter acesso</h1>
-    <div class="l-container">
-        <form action="/envio/" method="post">
-            <input type="text" name="nome" required placeholder="nome">
-            <input type="tel" name="telefone" required placeholder="Telefone">
-            <input type="email" name="email" required placeholder="Email">
-            <div class="cidade">
-                <input type="text" name="cidade" required placeholder="Cidade">
-                <input type="text" name="estado" required placeholder="Estado">
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-    <script src="https://kit.fontawesome.com/7985080309.js" crossorigin="anonymous"></script>
+        <h1 class="titulo">Cadastre-se para ter acesso</h1>
+        <a href="/logando/logando" class="logar">
+            <h2>Já é cadastrado? Clique aqui</h2>
+        </a>
+        <div class="l-container">
+            <form action="/envio/cadastrado" method="post">
+                <input type="text" name="nome" required placeholder="nome">
+                <input type="tel" name="telefone" required placeholder="Telefone">
+                <input type="email" name="email" required placeholder="Email">
+                <div class="cidade">
+                    <input type="text" name="cidade" required placeholder="Cidade">
+                    <input type="text" name="estado" required placeholder="Estado">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
+
+           
+        </div>
+        <%- include('footer') %>
+
+        <script src="https://kit.fontawesome.com/7985080309.js" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <% if(typeof alert != "undefined"){ %>
+    <script>
+        Swal.fire({
+          title:'<%= alertTitle %> ',
+          text:'<%= alertMenssage %>',
+          icon:'<%= alertIcon %>',
+          showConfirmButton:'<%= showConfirmButton %>',
+          timer:'<%= timer %>',
+        }).then(()=>{
+            window.location='/<%= ruta %>'
+        })
+    </script>
+       <% } %>
 </body>
+
 </html>

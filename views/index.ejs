@@ -9,14 +9,18 @@
 </head>
 
 <body>
+    <div class="controle">
+        <h3 class="cliente"><i class="fa-solid fa-user"></i> &nbsp; Oi &nbsp; <span class="cli-export">  <%= cliente %> &nbsp; </span> seja bem vindo(a)!</h3>
+      </div>
     <%- include('header') %>
 
-        <div class="l-container">
-
-            <img src="/images/capaindex.png" alt="">
+        <div class="l-container" >
+            <div class="back" style="position: absolute; right: 10px; top: 20px; ">
+                <h5><a href="/logando/deslogado" style="color: rgba(130, 130, 130, 0.513);">deslogar</a></h5>
+            </div>
+            <img src="/images/capaindex.png" alt=""  >
 
             <h1>CRIE SEU SITE CONOSCO! </h1>
-            <h1>essa e sua visita numero <%= visita %> </h1>
             <div class="carde-1">
                 <img src="/images/prop1.jpeg" alt="">
                 <div class="testos">
@@ -31,7 +35,7 @@
             </div>
 
         </div>
-
+        <%- include('footer') %>
 </body>
 
 </html>

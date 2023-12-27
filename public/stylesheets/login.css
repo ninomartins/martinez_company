@@ -1,0 +1,40 @@
+.l-container {
+    width: 100%;
+   height: 50vh;
+}
+.content {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+.content h1 {
+    font-size: var(--font-step-2);
+    margin-bottom: 20px;
+    color: var(--cor2);
+}
+.content form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.content form input{
+    width: 100%;  
+    padding: 7px;
+    border-radius: 7px;
+}
+.content form button{
+    width: 20%;  
+    border: none;
+    box-shadow: 1px 1px 10px black;
+    padding: 10px 20px;
+    background: none;
+    border-radius: 7px;
+    color: var(--cor2);
+}
+.content form button:hover{
+    box-shadow: 1px 1px 10px tomato;
+    cursor: pointer; 
+}

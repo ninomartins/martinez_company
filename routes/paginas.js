@@ -1,10 +1,10 @@
 const rota = require('express').Router()
 const Rotas = require('../routes/rotas')
 
+rota.get('/footer',Rotas.getContatos)
 
-rota.get('/contatos',Rotas.getContatos)
-rota.get('/home',Rotas.getIndex)
-rota.get('/prod',Rotas.getProduto)
+// rota.get('/home',Rotas.getIndex)
+rota.get('/logar',Rotas.getRegistrado)
 
 
 

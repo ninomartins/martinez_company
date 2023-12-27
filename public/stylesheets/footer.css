@@ -1,0 +1,113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+  }
+  :root{
+    /* cores */
+    --cor1: rgb(89, 89, 89);
+    --cor2: rgba(89, 89, 89, 0.66);
+    --cor3: rgba(203, 203, 203, 0.338);
+    /* fontes */
+    --font-step--2: clamp(0.78rem, calc(0.78rem + 0.13vw), 0.84rem);
+    --font-step--1: clamp(0.94rem, calc(0.79rem + 0.38vw), 1.13rem);
+    --font-step-0: clamp(1.13rem, calc(0.83rem + 0.75vw), 1.5rem);
+    --font-step-1: clamp(1.13rem, calc(0.83rem + 1.3vw), 2rem);
+    --font-step-2: clamp(1.62rem, calc(0.78rem + 2.09vw), 2.67rem);
+    --font-step-3: clamp(1.94rem, calc(0.66rem + 3.22vw), 3.55rem);
+    --font-step-4: clamp(2.33rem, calc(0.41rem + 4.81vw), 4.74rem);
+    --font-step-5: clamp(2.8rem, calc(-0.01rem + 7.03vw), 6.31rem);
+    --font-step-6: clamp(1.7rem, calc(-0.66rem + 6.22vw), 6.55rem);
+  }
+
+
+.rodape {
+    display: grid;
+    grid-template-areas:
+    "sociais produtos endereco"
+    " producao producao producao" ;
+    background-color: rgba(255, 99, 71, 0.752);
+    height: 200px;
+}
+.redes_sociais {
+    display: flex;
+    flex-direction: column;
+    grid-area: sociais;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.redes_sociais h3 {
+   color: var(--cor1);
+   font-size: var(--font-step-0);
+}
+.container-soc  {
+    display: flex;
+    gap: 20px;
+}
+.soc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.container-soc p {
+   color: var(--cor1);
+   font-size: var(--font-step--1);
+}
+.container-soc i {
+   color: var(--cor2);
+}
+.produtos {
+    grid-area: produtos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.produtos h3 {
+    font-size: var(--font-step-0);
+    color: var(--cor1);
+}
+.produtos a:hover p {
+   color:white;
+}
+.produtos p {
+    color: var(--cor1);
+    font-size: var(--font-step--1);
+    text-align: center;
+}
+.local {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    grid-area:endereco ;
+    justify-content: center;
+}
+.local h3 {
+   font-size: var(--font-step-0);
+   color: var(--cor1);
+}
+.local p{
+  color: var(--cor1);
+  font-size: var(--font-step--1);
+}
+.producao {
+    grid-area: producao;
+    display: flex;
+    justify-content: center;
+}
+
+.producao h1 {
+font-size: var(--font-step-2);
+color: var(--cor1);
+}
+.producao span {
+font-size: var(--font-step-0);
+color: var(--cor1);
+}

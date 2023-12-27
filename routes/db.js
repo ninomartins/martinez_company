@@ -1,34 +1,40 @@
 
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('power','root','123456',{
-    host:"localhost",
-    dialect:"mysql"
+const sequelize = new Sequelize('celke', 'root', '123456', {
+    host: process.env.DB_HOST,
+    dialect: "mysql"
 })
 
 
 
-sequelize.authenticate().then(()=>{
+sequelize.authenticate().then(() => {
     console.log('Banco de dados conectado')
-}).catch((erro)=>{
-    console.log('Falha de conexao: '+erro)
+}).catch((erro) => {
+    console.log('Falha de conexao: ' + erro)
 })
 
-const clientes = sequelize.define('cadastros',{
-    nome:{
-        type:Sequelize.STRING
+const clientes = sequelize.define('cadastros_db', {
+    login: {
+        type: Sequelize.STRING
     },
-    telefone:{
-        type:Sequelize.STRING
+    nome: {
+        type: Sequelize.STRING
     },
-    email:{
-        type:Sequelize.STRING
+    telefone: {
+        type: Sequelize.STRING
     },
-    cidade:{
-        type:Sequelize.STRING
+    email: {
+        type: Sequelize.STRING
     },
-    estado:{
-        type:Sequelize.STRING
-    }
+    cidade: {
+        type: Sequelize.STRING
+    },
+    estado: {
+        type: Sequelize.STRING
+    },
+    senha: {
+        type: Sequelize.STRING
+    },
 
 });
 

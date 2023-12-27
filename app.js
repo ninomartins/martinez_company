@@ -6,38 +6,68 @@ var logger = require('morgan');
 const db = require('./routes/db')
 const bodyParser = require('body-parser')
 const session = require('express-session')
+const jwt = require('jsonwebtoken')
+const bcsrypt = require('bcryptjs')
 
+const dotenv = require('dotenv');
+dotenv.config({path:'./env/.env'})
+
+var app = express();
+
+// rotas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var usersRotas = require('./routes/paginas');
 var usersRotachek = require('./routes/checar');
-const buscaRota = require('./routes/procura')
+const buscaRota = require('./routes/procura');
+const rotaLog = require('./routes/logar');
 
 
-var app = express();
+
 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}))
-app.use(logger('dev'));
 app.use(express.json());
+app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({secret:'hello sesseion'}));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret:'hello sesseion',
+  resave:true,
+  saveUninitialized:true
+}));
+
 
 
 // rootas
-app.use('/', indexRouter);
+app.use('/', rotaLog);
 app.use('/envio', usersRouter);
 app.use('/pagina',usersRotas);
 app.use('/control',usersRotachek);
 app.use('/buscar',buscaRota);
+app.use('/logando',rotaLog)
 
 
+// logar
 
+app.post('/',async(req,res)=>{
+  const login = req.body.login
+  const senha = req.body.senha
+  let senhacripto = await bcsryptjs.hash(senha, 8)
+    const user = await cadastros_db.findOne({
+      atributes:['id' ,'login' , 'nome','telefone','email', 'cidade','estado','senha'],
+      where: { 
+        login:login 
+      }
+    
+    });
+    
+   
+  });
 
 
 // catch 404 and forward to error handler

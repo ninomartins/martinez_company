@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
 </head>
 <body>
-    <h1>Conectado</h1>
-   <p>voce esta cadastrado</p>
+    <%- include('header') %>
+    <div class="l-container">
+        <div class="content">
+            <h1>Logar</h1>
+            <form action="/logando" method="post">
+                <input type="text" name="login" placeholder="Digite o login">
+                <input type="password" name="pass" placeholder="Digite sua senha">
+                <button type="submit">Logar</button>
+            </form>
+        </div>
+    </div>
+    <%- include('footer') %>
 </body>
 </html>

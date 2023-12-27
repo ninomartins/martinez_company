@@ -68,11 +68,14 @@ color: tomato;
     align-items: center;
 }
 .nav {
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
+
+
 .nav li{
     position: relative;
     width: 10%;
@@ -82,7 +85,7 @@ color: tomato;
     padding: 3px;
 }
 .nav li a{
-   font-size: var(--font-step-0);
+   font-size: var(--font-step--1);
 }
 .nav li::after{
     content: "";

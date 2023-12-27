@@ -1,6 +1,7 @@
 .l-container {
     display: flex;
     justify-content: center;
+    height:50vh;
 }
 .controle {
     position: absolute;
@@ -16,9 +17,18 @@
 }
 .titulo {
     text-align: center;
-    font-size: var(--font-step-2);
-    margin-bottom: 30px;
+    font-size: var(--font-step-2); 
     margin-top: 50px;
+}
+.logar {
+    text-align: center;
+    color: var(--cor2);
+    margin-bottom: 30px;
+}
+.logar h2{
+    text-align: center;
+    color: var(--cor2);
+    margin-bottom: 30px;
 }
 .l-container form {
     width: 50%;
